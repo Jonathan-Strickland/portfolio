@@ -41,18 +41,18 @@ export default function Home() {
         <div className="skills-section">
           <h3>Languages & Frameworks</h3>
           <div className="skills-grid">
-            <img src="/icons/python.png" alt="Python" />
-            <img src="/icons/html.png" alt="HTML" />
-            <img src="/icons/css.png" alt="CSS" />
-            <img src="/icons/javascript.png" alt="JavaScript" />
-            <img src="/icons/java.png" alt="Java" />
-            <img src="/icons/react.png" alt="React" />
-            <img src="/icons/node.png" alt="Node.js" />
-            <img src="/icons/aws.png" alt="AWS" />
-            <img src="/icons/sql.png" alt="SQL" />
-            <img src="/icons/mongodb.png" alt="MongoDB" />
-            <img src="/icons/figma.png" alt="Figma" />
-            <img src="/icons/unity.png" alt="Unity" />
+            <img src="/portfolio/public/images/python.png" alt="Python" />
+            <img src="/portfolio/public/images/html.png" alt="HTML" />
+            <img src="/portfolio/public/images/css.png" alt="CSS" />
+            <img src="/portfolio/public/images/javascript.png" alt="JavaScript" />
+            <img src="/portfolio/public/images/java.png" alt="Java" />
+            <img src="/portfolio/public/images/react.png" alt="React" />
+            <img src="/portfolio/public/images/node.png" alt="Node.js" />
+            <img src="/portfolio/public/images/aws.png" alt="AWS" />
+            <img src="/portfolio/public/images/sql.png" alt="SQL" />
+            <img src="/portfolio/public/images/mongodb.png" alt="MongoDB" />
+            <img src="/portfolio/public/images/figma.png" alt="Figma" />
+            <img src="/portfolio/public/images/unity.png" alt="Unity" />
           </div>
         </div>
       </div>
