@@ -12,9 +12,9 @@ export default function Home() {
           />
           <h2>Jonathan Strickland</h2>
           <p>Full Stack Software Developer</p>
-          <link to="/contact">
+          <Link to="/contact">
             <button className="contact-btn">Contact Me</button>
-          </link>
+          </Link>
           <div className="socials">
             <a
               href="https://www.linkedin.com/in/jonathan-strickland-6468b4332/"
