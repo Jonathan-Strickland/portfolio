@@ -41,9 +41,9 @@ export default function Home() {
         <div className="skills-section">
           <h3>Languages & Frameworks</h3>
           <div className="skills-grid">
-            <img src="/portfolio/images/python.png" alt="Python" />
-            <img src="/portfolio/images/html.png" alt="HTML" />
-            <img src="/portfolio/images/css.png" alt="CSS" />
+            <img src="/portfolio/public/images/python.png" alt="Python" />
+            <img src="/portfolio/public/images/html.png" alt="HTML" />
+            <img src="/portfolio/public/images/css.png" alt="CSS" />
             <img src="/portfolio/public/images/javascript.png" alt="JavaScript" />
             <img src="/portfolio/public/images/java.png" alt="Java" />
             <img src="/portfolio/public/images/react.png" alt="React" />
