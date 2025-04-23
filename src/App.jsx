@@ -20,7 +20,7 @@ function App() {
         <Route path="/badges" element={<Badges />} />
         <Route path="/sudokumenu" element={<SudokuMenu />} />
         <Route path="/sudoku/:difficulty/:level" element={<SudokuGame key={window.location.pathname} />} />
-        <Route path="dodgeenemy" element={<DodgeEnemy />} />
+        <Route path="/dodgeenemy" element={<DodgeEnemy />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
