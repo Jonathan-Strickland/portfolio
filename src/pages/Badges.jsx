@@ -7,14 +7,14 @@ export default function Badges() {
       <div className="badge-grid">
         <div className="badge-card">
           <img
-            src="/portfolio/images/aws-foundations.png"
+            src="/images/aws-foundations.png"
             alt="AWS Cloud Foundations"
           />
           <p>AWS Academy Cloud Foundations</p>
         </div>
         <div className="badge-card">
           <img
-            src="/portfolio/images/aws-developing.png"
+            src="/images/aws-developing.png"
             alt="AWS Cloud Developing"
           />
           <p>AWS Academy Cloud Developing</p>

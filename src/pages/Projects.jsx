@@ -8,7 +8,7 @@ export default function Projects() {
         <div className="projects-container">
           <div className="project-grid">
             <div className="project-card">
-              <img src="/portfolio/images/pass.png" alt="Password Gen" />
+              <img src="/images/pass.png" alt="Password Gen" />
               <h3>Password Generator</h3>
               <p>A simple Password Generator made with JavaScript.</p>
               <div className="project-links">
@@ -23,7 +23,7 @@ export default function Projects() {
             </div>
 
             <div className="project-card">
-              <img src="/portfolio/images/dog.png" alt="Dog Image App" />
+              <img src="/images/dog.png" alt="Dog Image App" />
               <h3>Dog Image App</h3>
               <p>A responsive gallery using the Dog CEO API.</p>
               <div className="project-links">

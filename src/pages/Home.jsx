@@ -6,7 +6,7 @@ export default function Home() {
       <div className="home-container">
         <div className="profile-card">
           <img
-            src="/portfolio/images/headshot.png"
+            src="/images/headshot.png"
             alt="Your headshot"
             className="profile-img"
           />
@@ -41,18 +41,18 @@ export default function Home() {
         <div className="skills-section">
           <h3>Languages & Frameworks</h3>
           <div className="skills-grid">
-            <img src="/portfolio/images/python.png" alt="Python" />
-            <img src="/portfolio/images/html.png" alt="HTML" />
-            <img src="/portfolio/images/css.png" alt="CSS" />
-            <img src="/portfolio/images/javascript.png" alt="JavaScript" />
-            <img src="/portfolio/images/java.png" alt="Java" />
-            <img src="/portfolio/images/react.png" alt="React" />
-            <img src="/portfolio/images/node.png" alt="Node.js" />
-            <img src="/portfolio/images/aws.png" alt="AWS" />
-            <img src="/portfolio/images/sql.png" alt="SQL" />
-            <img src="/portfolio/images/mongodb.png" alt="MongoDB" />
-            <img src="/portfolio/images/figma.png" alt="Figma" />
-            <img src="/portfolio/images/unity.png" alt="Unity" />
+            <img src="/images/python.png" alt="Python" />
+            <img src="/images/html.png" alt="HTML" />
+            <img src="/images/css.png" alt="CSS" />
+            <img src="/images/javascript.png" alt="JavaScript" />
+            <img src="/images/java.png" alt="Java" />
+            <img src="/images/react.png" alt="React" />
+            <img src="/images/node.png" alt="Node.js" />
+            <img src="/images/aws.png" alt="AWS" />
+            <img src="/images/sql.png" alt="SQL" />
+            <img src="/images/mongodb.png" alt="MongoDB" />
+            <img src="/images/figma.png" alt="Figma" />
+            <img src="/images/unity.png" alt="Unity" />
           </div>
         </div>
       </div>
