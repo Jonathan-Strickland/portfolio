@@ -6,7 +6,7 @@ export default function Home() {
       <div className="home-container">
         <div className="profile-card">
           <img
-            src="/headshot.jpg"
+            src="/portfolio/images/headshot.jpg"
             alt="Your headshot"
             className="profile-img"
           />
