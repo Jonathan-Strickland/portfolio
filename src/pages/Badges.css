@@ -1,0 +1,39 @@
+.badges-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.badges-section h2 {
+  color: gold;
+  margin-bottom: 2rem;
+}
+
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.badge-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 250px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.badge-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.badge-card p {
+  margin-top: 0.75rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}

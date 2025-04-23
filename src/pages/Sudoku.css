@@ -1,0 +1,101 @@
+.sudoku-menu {
+  text-align: center;
+  padding: 3rem;
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.difficulty-buttons button {
+  background-color: gold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.difficulty-buttons button:hover {
+  background-color: #ffdd57;
+}
+
+.sudoku-wrapper {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.sudoku-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sudoku-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.sudoku-header p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.sudoku-controls {
+  margin-top: 1rem;
+}
+
+.sudoku-controls button {
+  background-color: gold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sudoku-controls button:hover {
+  background-color: #ffd900;
+}
+
+.sudoku-grid {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  margin: 2rem auto;
+}
+
+.sudoku-grid input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid #555;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #f9c74f;
+}
+
+.sudoku-grid input.fixed {
+  background-color: #333;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+
+.game-over {
+  color: red;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
