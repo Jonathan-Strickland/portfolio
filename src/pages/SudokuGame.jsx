@@ -81,13 +81,11 @@ export default function SudokuGame() {
     const [row, col] = selectedCell;
     handleChange(row, col, value);
   };
-
+  
   const newGame = () => {
     const randomLevel = Math.floor(Math.random() * (puzzles[difficulty]?.length || 1));
     navigate(`/sudoku/${difficulty}/${randomLevel}`);
   };
-
-  const isMobile = window.innerWidth <= 768;
 
   if (!board || board.length === 0) return <div className="sudoku-wrapper"><p>Loading puzzle...</p></div>;
 
@@ -111,24 +109,25 @@ export default function SudokuGame() {
             <input
               key={`${rowIndex}-${colIndex}`}
               type="text"
-              maxLength="1"
+              readOnly
               value={cell || ''}
               onClick={() => setSelectedCell([rowIndex, colIndex])}
-              onChange={(e) => handleChange(rowIndex, colIndex, e.target.value)}
-              className={initialBoard[rowIndex][colIndex] !== null ? 'fixed' : ''}
+              className={`${initialBoard[rowIndex][colIndex] !== null ? 'fixed' : ''} ${selectedCell?.[0] === rowIndex && selectedCell?.[1] === colIndex ? 'selected' : ''}`}
             />
           ))
         )}
       </div>
 
-      {isMobile && (
-        <div className="mobile-pad">
-          {[...Array(board.length)].map((_, i) => (
-            <button key={i + 1} onClick={() => handlePadClick(String(i + 1))}>{i + 1}</button>
-          ))}
-          <button className="erase" onClick={() => handlePadClick('')}>Erase</button>
-        </div>
-      )}
+      <div className="mobile-pad">
+        {[...Array(board.length)].map((_, i) => (
+          <button key={i + 1} onClick={() => handlePadClick(String(i + 1))}>
+            {i + 1}
+          </button>
+        ))}
+        <button className="erase" onClick={() => handlePadClick('')}>
+          Erase
+        </button>
+      </div>
 
       {lives <= 0 && <div className="game-over">Game Over</div>}
       {win && <div className="game-win">🎉 You Win!</div>}
