@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { puzzles } from '../data/puzzles';
-import './sudoku.css';
+import './Sudoku.css';
 
 export default function SudokuGame() {
   const { difficulty, level } = useParams();
@@ -21,47 +21,72 @@ export default function SudokuGame() {
     setWin(false);
   }, [difficulty, level]);
 
-  const handleChange = (row, col, value) => {
-    if (initialBoard[row][col] !== null || lives <= 0 || win) return;
-    const newValue = parseInt(value);
-    if (!newValue || newValue < 1 || newValue > 9) return;
-
-    const correct = checkSolution(row, col, newValue);
-    const updatedBoard = board.map((r, i) =>
-      r.map((c, j) => (i === row && j === col ? newValue : c))
-    );
-    setBoard(updatedBoard);
-
-    if (!correct) {
-      setLives((prev) => prev - 1);
-    } else {
-      checkWin(updatedBoard);
+  const checkSolution = (currentBoard, row, col, val) => {
+    const size = currentBoard.length;
+    const boxSize = Math.sqrt(size);
+  
+    // Check row
+    for (let i = 0; i < size; i++) {
+      if (i !== col && currentBoard[row][i] === val) return false;
     }
-  };
-
-  const checkSolution = (row, col, val) => {
-    const rowValues = new Set(board[row]);
-    const colValues = new Set(board.map(r => r[col]));
-    const startRow = Math.floor(row / 3) * 3;
-    const startCol = Math.floor(col / 3) * 3;
-    const boxValues = new Set();
-
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        boxValues.add(board[startRow + i][startCol + j]);
+  
+    // Check column
+    for (let i = 0; i < size; i++) {
+      if (i !== row && currentBoard[i][col] === val) return false;
+    }
+  
+    // Check box
+    const startRow = Math.floor(row / boxSize) * boxSize;
+    const startCol = Math.floor(col / boxSize) * boxSize;
+    for (let i = 0; i < boxSize; i++) {
+      for (let j = 0; j < boxSize; j++) {
+        const r = startRow + i;
+        const c = startCol + j;
+        if ((r !== row || c !== col) && currentBoard[r][c] === val) return false;
       }
     }
-
-    return !rowValues.has(val) && !colValues.has(val) && !boxValues.has(val);
+  
+    return true;
   };
-
+  
   const checkWin = (newBoard) => {
     const filled = newBoard.every(row => row.every(cell => cell !== null));
     if (filled) {
       setWin(true);
     }
   };
-
+  
+  const handleChange = (row, col, value) => {
+    if (initialBoard[row][col] !== null || lives <= 0 || win) return;
+  
+    // Clear the cell if input is empty
+    if (value === "") {
+      const clearedBoard = board.map((r, i) =>
+        r.map((c, j) => (i === row && j === col ? null : c))
+      );
+      setBoard(clearedBoard);
+      return;
+    }
+  
+    const newValue = parseInt(value);
+    if (!newValue || newValue < 1 || newValue > board.length) return;
+  
+    // Prevent changing a non-empty value without clearing first
+    if (board[row][col] !== null) return;
+  
+    const updatedBoard = board.map((r, i) =>
+      r.map((c, j) => (i === row && j === col ? newValue : c))
+    );
+    setBoard(updatedBoard);
+  
+    const correct = checkSolution(updatedBoard, row, col, newValue);
+    if (!correct) {
+      setLives((prev) => prev - 1);
+    } else {
+      checkWin(updatedBoard);
+    }
+  };
+  
   const newGame = () => {
     const randomLevel = Math.floor(Math.random() * 5);
     navigate(`/sudoku/${difficulty}/${randomLevel}`);
