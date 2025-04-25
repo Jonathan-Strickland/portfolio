@@ -111,3 +111,50 @@
   align-items: center;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .profile-card {
+    margin-left: 0;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .skills-section {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .skills-grid img {
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+
+  .about-me {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .about-me > div {
+    padding: 1rem;
+  }
+
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-me p {
+    font-size: 0.95rem;
+  }
+}
