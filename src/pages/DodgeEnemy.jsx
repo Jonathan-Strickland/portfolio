@@ -19,28 +19,32 @@ export default function DodgeTheEnemy() {
     let animationFrameId;
     let lastEnemyTime = 0;
     const gameStart = performance.now();
-
+  
+    // Prevent right-click / long-press inspect menu
+    const preventContext = (e) => e.preventDefault();
+    canvas.addEventListener("contextmenu", preventContext);
+  
     const handleKeyDown = (e) => {
       keysPressed.current[e.key] = true;
     };
-
+  
     const handleKeyUp = (e) => {
       keysPressed.current[e.key] = false;
     };
-
+  
     const spawnEnemyGroup = () => {
       const groupSize = 4 + Math.floor(Math.random() * 2); // 4-5 enemies
       const spacing = canvas.width / (groupSize + 1);
       const gapIndex = Math.floor(Math.random() * (groupSize + 1));
       const newEnemies = [];
-
+  
       for (let i = 0; i <= groupSize; i++) {
         if (i === gapIndex) continue;
         const size = 15 + Math.random() * 2;
         const x = spacing * i + Math.random() * (spacing - size);
         newEnemies.push({ x, y: -size, size });
       }
-
+  
       setEnemies((prev) => {
         if (prev.length < 25) {
           return [...prev, ...newEnemies];
@@ -48,12 +52,12 @@ export default function DodgeTheEnemy() {
         return prev;
       });
     };
-
+  
     const updateGame = (timestamp) => {
       if (gameOver || win) return;
-
+  
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+  
       // Player movement
       setPlayer((prev) => {
         let newX = prev.x;
@@ -61,15 +65,15 @@ export default function DodgeTheEnemy() {
         if (keysPressed.current['ArrowRight']) newX = Math.min(canvas.width - prev.size, newX + 2);
         return { ...prev, x: newX };
       });
-
-      // Player
+  
+      // Draw player
       ctx.fillStyle = invincible ? '#90e0ef' : '#4cc9f0';
       ctx.fillRect(player.x, player.y, player.size, player.size);
-
-      // Enemies
+  
+      // Handle enemies
       ctx.fillStyle = '#f94144';
-      setEnemies((prev) => {
-        return prev
+      setEnemies((prev) =>
+        prev
           .map((enemy) => ({ ...enemy, y: enemy.y + 1 }))
           .filter((enemy) => {
             const collision =
@@ -77,7 +81,7 @@ export default function DodgeTheEnemy() {
               enemy.x + enemy.size > player.x &&
               enemy.y < player.y + player.size &&
               enemy.y + enemy.size > player.y;
-
+  
             if (collision && !invincible && !damageCooldown.current) {
               damageCooldown.current = true;
               setHealth((h) => {
@@ -94,27 +98,27 @@ export default function DodgeTheEnemy() {
                 return newHealth;
               });
             }
+  
             return enemy.y < canvas.height;
-          });
-      });
-
-
+          })
+      );
+  
       enemies.forEach((enemy) => {
         ctx.fillRect(enemy.x, enemy.y, enemy.size, enemy.size);
       });
-
+  
       if (!gameOver && !win) {
         setScore((prev) => prev + 1);
       }
-
+  
       if (timestamp - gameStart >= 60000) {
         setWin(true);
         return;
       }
-
+  
       animationFrameId = requestAnimationFrame(gameLoop);
     };
-
+  
     const gameLoop = (timestamp) => {
       if (!gameOver && !win) {
         if (timestamp - lastEnemyTime > 2000) {
@@ -124,17 +128,19 @@ export default function DodgeTheEnemy() {
         updateGame(timestamp);
       }
     };
-
+  
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('keyup', handleKeyUp);
     animationFrameId = requestAnimationFrame(gameLoop);
-
+  
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
       cancelAnimationFrame(animationFrameId);
+      canvas.removeEventListener("contextmenu", preventContext); // ✅ cleanup
     };
   }, [player, enemies, gameOver, win, invincible]);
+  
 
   const restartGame = () => {
     setPlayer({ x: 200, y: 450, size: 20 });
@@ -164,7 +170,6 @@ export default function DodgeTheEnemy() {
         <button className="restart-btn" onClick={restartGame}>Play Again</button>
       )}
   
-      {/* ✅ Mobile Controls Here */}
       {!gameOver && !win && (
         <div className="mobile-controls">
           <button
