@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import './dodge.css';
+import './Dodge.css';
 
 export default function DodgeTheEnemy() {
   const canvasRef = useRef(null);
