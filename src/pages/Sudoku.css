@@ -1,30 +1,37 @@
 .sudoku-menu {
   text-align: center;
-  padding: 3rem;
+  padding: 4rem 1rem;
+}
+
+.sudoku-menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .difficulty-buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .difficulty-buttons button {
   background-color: gold;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: black;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  color: black;
 }
 
 .difficulty-buttons button:hover {
-  background-color: #ffdd57;
+  background-color: #ffd900;
 }
+
 
 .sudoku-wrapper {
   text-align: center;
@@ -68,11 +75,13 @@
   background-color: #ffd900;
 }
 
+/* Grid Styling */
 .sudoku-grid {
   display: grid;
   justify-content: center;
   gap: 5px;
   margin: 2rem auto;
+  width: fit-content;
 }
 
 .sudoku-grid input {
@@ -84,7 +93,9 @@
   border-radius: 6px;
   background-color: #1a1a1a;
   color: #f9c74f;
+  box-sizing: border-box;
 }
+
 
 .sudoku-grid input.fixed {
   background-color: #333;
@@ -92,10 +103,52 @@
   pointer-events: none;
 }
 
-
+/* Game messages */
 .game-over {
   color: red;
   font-size: 1.4rem;
   font-weight: bold;
   margin-top: 1rem;
+}
+
+.game-win {
+  color: lightgreen;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Number Pad */
+.mobile-pad {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-pad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .mobile-pad button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    background-color: gold;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    flex: 1 0 18%;
+  }
+
+  .mobile-pad .erase {
+    background-color: #f87171;
+  }
+
+  .mobile-pad button:hover {
+    background-color: #ffd900;
+  }
 }
