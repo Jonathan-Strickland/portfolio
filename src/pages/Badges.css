@@ -37,3 +37,24 @@
   color: #ccc;
   font-size: 0.95rem;
 }
+
+@media (max-width: 768px) {
+  .badges-section {
+    padding: 1rem;
+  }
+
+  .badge-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .badge-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .badge-card p {
+    font-size: 0.95rem;
+  }
+}
