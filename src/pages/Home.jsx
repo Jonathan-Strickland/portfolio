@@ -66,13 +66,13 @@ export default function Home() {
             My name is Jonathan Strickland, I am a passionate full stack developer with a focus on backend and a dream to break into the game development world. I grew up playing video games and always knew I wanted to build my own one day.
           </p>
           <p>
-            I studied Software Development at Keyin College, where I developed a strong foundation in programming, especially with Java — my favorite language. While I've worked with both SQL and NoSQL databases (including MongoDB), I feel most confident building responsive, user-friendly interfaces.
+            I studied Software Development at Keyin College, where I've learnt back-end development with languages like Python, Java and JavaScript, and also front-end development with JavaScript, HTML, CSS and Figma.
           </p>
           <p>
-            I completed an internship with <strong>Mallax Vision</strong>, and I'm currently working on a Unity project with a couple of close friends. It's been a great way to learn C# and dive deeper into the world of game development.
+            I am also working on a project that I am taking the time to learn myself in Unity, which is also helping me build skills in game development, as that is my long term goal as a developer.
           </p>
           <p>
-            While I'm still early in my journey, nothing beats the feeling of solving a tough problem or watching a feature come to life. I'm currently leveling up my skills in Unity and C#, and I'm excited to keep growing as a game developer.
+            While I'm still early in my journey, I push my self to learn something new everyday and working towards being the best developer I can.
           </p>
         </div>
       </section>
