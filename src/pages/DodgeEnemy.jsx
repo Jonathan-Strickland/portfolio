@@ -151,15 +151,37 @@ export default function DodgeTheEnemy() {
       <h2>Dodge the Enemy</h2>
       <p>Use Arrow Keys Left & Right</p>
       <canvas ref={canvasRef} width={500} height={500}></canvas>
+  
       <div className="hud">
         <p>Score: {score}</p>
         <p>Health: {health}</p>
       </div>
+  
       {gameOver && <div className="game-over">💀 Game Over</div>}
       {win && <div className="game-win">🎉 You Win!</div>}
+  
       {(gameOver || win) && (
         <button className="restart-btn" onClick={restartGame}>Play Again</button>
       )}
+  
+      {/* ✅ Mobile Controls Here */}
+      {!gameOver && !win && (
+        <div className="mobile-controls">
+          <button
+            onTouchStart={() => (keysPressed.current['ArrowLeft'] = true)}
+            onTouchEnd={() => (keysPressed.current['ArrowLeft'] = false)}
+          >
+            ◀️
+          </button>
+          <button
+            onTouchStart={() => (keysPressed.current['ArrowRight'] = true)}
+            onTouchEnd={() => (keysPressed.current['ArrowRight'] = false)}
+          >
+            ▶️
+          </button>
+        </div>
+      )}
     </div>
   );
+  
 }
