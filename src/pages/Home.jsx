@@ -69,7 +69,7 @@ export default function Home() {
             I studied Software Development at Keyin College, where I've learnt back-end development with languages like Python, Java and JavaScript, and also front-end development with JavaScript, HTML, CSS and Figma.
           </p>
           <p>
-            I am also working on a project that I am taking the time to learn myself in Unity, which is also helping me build skills in game development, as that is my long term goal as a developer.
+            In my spare time, I enjoy working on projects that allow me to learn new programs like Unity. This hands-on experience help to build my skills in game development which is my long-term goal as a developer
           </p>
           <p>
             While I'm still early in my journey, I push my self to learn something new everyday and working towards being the best developer I can.
