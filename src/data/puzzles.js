@@ -33,44 +33,44 @@ export const puzzles = {
   ],
   medium: [
     [
-      [null, 2, null, 4, null, 6],
-      [6, null, 2, null, 1, null],
-      [null, 1, null, null, 5, null],
+      [5, null, 6, null, null, null],
+      [null, 2, null, null, 1, 6],
+      [3, null, null, null, null, null],
       [null, 5, null, null, 6, null],
-      [null, 6, null, 1, null, 3],
-      [1, null, 5, null, 2, null]
+      [1, 3, null, null, 5, 4],
+      [6, null, null, null, null, null]
     ],
     [
-      [null, 2, null, 4, null, 6],
-      [6, null, 2, null, 1, null],
-      [null, 1, null, null, 5, null],
-      [null, 5, null, null, 6, null],
-      [null, 6, null, 1, null, 3],
-      [1, null, 5, null, 2, null]
+      [5, null, null, 3, null, null],
+      [3, null, null, null, 1, null],
+      [null, 6, null, null, 2, 5],
+      [null, 2, null, null, null, null],
+      [6, null, 1, null, null, null],
+      [2, null, null, null, null, null]
     ],
     [
-      [null, 2, null, 4, null, 6],
-      [6, null, 2, null, 1, null],
-      [null, 1, null, null, 5, null],
-      [null, 5, null, null, 6, null],
-      [null, 6, null, 1, null, 3],
-      [1, null, 5, null, 2, null]
+      [4, null, 3, 2, null, 1],
+      [2, null, 1, 4, null, null],
+      [null, 1, 2, 6, null, 5],
+      [null, null, null, null, 1, null],
+      [1, null, 4, null, 3, 6],
+      [5, null, null, null, null, 4]
     ],
     [
-      [null, 2, null, 4, null, 6],
-      [6, null, 2, null, 1, null],
-      [null, 1, null, null, 5, null],
-      [null, 5, null, null, 6, null],
-      [null, 6, null, 1, null, 3],
-      [1, null, 5, null, 2, null]
+      [null, 2, null, null, 3, 6],
+      [3, 1, null, null, null, null],
+      [6, 5, 2, 3, 1, null],
+      [1, 3, 4, null, 2, null],
+      [null, null, 1, null, 4, null],
+      [null, 4, 3, 5, null, null]
     ],
     [
-      [null, 2, null, 4, null, 6],
-      [6, null, 2, null, 1, null],
-      [null, 1, null, null, 5, null],
-      [null, 5, null, null, 6, null],
-      [null, 6, null, 1, null, 3],
-      [1, null, 5, null, 2, null]
+      [null, 1, 2, 5, null, null],
+      [null, 4, null, null, null, null],
+      [null, null, null, 1, 5, null],
+      [1, null, null, 2, null, null],
+      [4, null, null, null, null, null],
+      [3, 2, 5, 4, 6, null]
     ]
   ],
   hard: [
