@@ -18,12 +18,40 @@
   gap: 2rem;
 }
 
+.ai-badge-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.ai-badge-card a{
+  color: white;
+}
+
+.ai-badge-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ai-badge-card p {
+  margin-top: 0.75rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
 .badge-card {
   background: #1a1a1a;
   border-radius: 12px;
   padding: 1rem;
-  max-width: 250px;
+  max-width: 450px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.badge-card a{
+  color: white;
 }
 
 .badge-card img {
