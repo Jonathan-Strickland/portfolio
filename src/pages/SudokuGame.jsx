@@ -1,4 +1,3 @@
-// SudokuGame.jsx (updated with mobile-only number pad)
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { puzzles } from '../data/puzzles';

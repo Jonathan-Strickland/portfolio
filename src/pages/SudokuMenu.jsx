@@ -13,7 +13,7 @@ export default function SudokuMenu() {
     setSelectedLevel(level);
     setTimeout(() => {
       navigate(`/sudoku/${difficulty}/${level}`);
-    }, 1000); // Short delay so user sees level
+    }, 1000);
   };
 
   return (
