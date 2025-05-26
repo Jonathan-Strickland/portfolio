@@ -8,16 +8,21 @@ export default function Projects() {
         <div className="projects-container">
           <div className="project-grid">
             <div className="project-card">
-              <img src="/images/pass.png" alt="Password Gen" />
+              <img src="/images/pass.png" alt="Password Gen"/>
               <h3>Password Generator</h3>
               <p>A simple Password Generator made with JavaScript.</p>
               <div className="project-links">
                 <a
                   href="https://github.com/Jonathan-Strickland/PasswordGen"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
+                  rel="noopener noreferrer">
                   GitHub
+                </a>
+                <a
+                 href="/projects/password-generator/index.html" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                  Live Demo
                 </a>
               </div>
             </div>
@@ -30,9 +35,14 @@ export default function Projects() {
                 <a
                   href="https://github.com/Jonathan-Strickland/DogApp"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
+                  rel="noopener noreferrer">
                   GitHub
+                </a>
+                <a
+                 href="/projects/password-generator/index.html" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                  Live Demo
                 </a>
               </div>
             </div>
